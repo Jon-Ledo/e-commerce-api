@@ -1,11 +1,3 @@
-#### Register Controller
-
-- [] create user
-- [] send response with entire user (only while testing)
-- [] check if email already in use (schema and controller)
-- [] ignore 'role'
-- [] alternative 'admin' setup
-
 #### Handle Password
 
 - [] UserSchema.pre('save') - hook
