@@ -1,6 +1,7 @@
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes')
 const customError = require('../errors')
+const { attachCookiesToResponse, createTokenUser } = require('../utils')
 
 const getAllUsers = async (req, res) => {
   // console.log(req.user) -> comes from middlewareauthentication
@@ -26,7 +27,23 @@ const showCurrentUser = async (req, res) => {
 }
 
 const updateUser = async (req, res) => {
-  res.send('update user')
+  const { name, email } = req.body
+  console.log(req.user)
+  if (!name || !email) {
+    throw new customError.BadRequestError('Please provide all values')
+  }
+
+  const user = await User.findOneAndUpdate(
+    { _id: req.user.userId },
+    { name, email },
+    { new: true, runValidators: true }
+  )
+
+  // let the front end know that the name has changed right away
+  const tokenUser = await createTokenUser(user)
+  attachCookiesToResponse({ res, user: tokenUser })
+
+  res.status(StatusCodes.OK).json({ msg: 'user info updated' })
 }
 
 const updateUserPassword = async (req, res) => {
