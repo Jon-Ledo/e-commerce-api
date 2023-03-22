@@ -1,7 +1,11 @@
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes')
 const customError = require('../errors')
-const { attachCookiesToResponse, createTokenUser } = require('../utils')
+const {
+  attachCookiesToResponse,
+  createTokenUser,
+  checkPermissions,
+} = require('../utils')
 
 const getAllUsers = async (req, res) => {
   // console.log(req.user) -> comes from middlewareauthentication
@@ -18,6 +22,8 @@ const getSingleUser = async (req, res) => {
       `No user found with id : ${req.params.id}`
     )
   }
+
+  checkPermissions(req.user, user._id)
 
   res.status(StatusCodes.OK).json({ user })
 }

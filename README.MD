@@ -1,10 +1,3 @@
-#### updateUser with User.findOneAndUpdate()
-
-- [] use findOneAndUpdate()
-- [] create token user, attachCookiesToResponse and send back the tokenUser
-
-#### updateUser with user.save()
-
 #### Setup and Apply checkPermissions()
 
 #### Product Model
