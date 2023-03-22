@@ -1,8 +1,3 @@
-#### ShowCurrentUser
-
-- [] get user from req
-- [] send response with user
-
 #### UpdateUserPassword
 
 - [] almost identical to login user
