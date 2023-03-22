@@ -1,7 +1,7 @@
 const User = require('../models/User')
 const { StatusCodes } = require('http-status-codes')
 const CustomError = require('../errors')
-const { attachCookiesToResponse } = require('../utils')
+const { attachCookiesToResponse, createTokenUser } = require('../utils')
 
 const register = async (req, res) => {
   const { email, name, password } = req.body
@@ -17,14 +17,10 @@ const register = async (req, res) => {
   const role = isFirstAccount ? 'admin' : 'user'
 
   // create new user
-  const newUser = await User.create({ email, name, password, role })
+  const user = await User.create({ email, name, password, role })
 
   // issue token upon creation
-  const tokenUser = {
-    name: newUser.name,
-    userID: newUser._id,
-    role: newUser.role,
-  }
+  const tokenUser = createTokenUser(user)
 
   // attach cookie to response using JWT functions
   attachCookiesToResponse({ res, user: tokenUser })
@@ -55,11 +51,7 @@ const login = async (req, res) => {
   }
 
   // attach cookie if all is correct
-  const tokenUser = {
-    name: user.name,
-    userID: user._id,
-    role: user.role,
-  }
+  const tokenUser = createTokenUser(user)
 
   // attach cookie to response using JWT functions
   attachCookiesToResponse({ res, user: tokenUser })
