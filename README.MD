@@ -1,15 +1,3 @@
-#### Review Model
-
-- [] create Review.js in models folder
-- [] create Schema
-- [] rating : {type:Number}
-- [] title: {type:String}
-- [] comment: {type:String}
-- [] user
-- [] product
-- [] set timestamps
-- [] export Review model
-
 #### Review Structure
 
 - [] add reviewController file in controllers
