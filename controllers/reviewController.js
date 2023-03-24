@@ -33,6 +33,14 @@ const createReview = async (req, res) => {
 
 const getAllReviews = async (req, res) => {
   const reviews = await Review.find({})
+    .populate({
+      path: 'product',
+      select: 'name company price',
+    })
+    .populate({
+      path: 'user',
+      select: 'name',
+    })
 
   res.status(StatusCodes.OK).json({ reviews, count: reviews.length })
 }
@@ -49,7 +57,25 @@ const getSingleReview = async (req, res) => {
 }
 
 const updateReview = async (req, res) => {
-  res.send('updateReview route')
+  const { id: reviewId } = req.params
+  const { rating, title, comment } = req.body
+
+  const review = await Review.findOne({ _id: reviewId })
+  if (!review) {
+    throw new CustomError.NotFoundError(`No review with this id : ${reviewId}`)
+  }
+
+  // Does this user have permission to delete this review
+  checkPermissions(req.user, review.user)
+
+  // update properties
+  review.rating = rating
+  review.title = title
+  review.comment = comment
+
+  await review.save()
+
+  res.status(StatusCodes.OK).json({ review })
 }
 
 const deleteReview = async (req, res) => {
