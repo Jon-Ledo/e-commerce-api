@@ -37,4 +37,19 @@ const ReviewSchema = new mongoose.Schema(
 // ensure user can leave only one review per product using mongoose COMPOUND INDEX
 ReviewSchema.index({ product: 1, user: 1 }, { unique: true })
 
+// callthe static method  on the schema not the instance
+ReviewSchema.statics.calculateAverageRating = async function (productId) {
+  console.log(productId)
+}
+
+ReviewSchema.post('save', async function () {
+  // console.log('post save hook called')
+  await this.constructor.calculateAverageRating(this.product)
+})
+
+ReviewSchema.post('remove', async function () {
+  // console.log('post remove hook called')
+  await this.constructor.calculateAverageRating(this.product)
+})
+
 module.exports = mongoose.model('Review', ReviewSchema)
