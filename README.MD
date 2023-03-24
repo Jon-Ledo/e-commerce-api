@@ -1,9 +1,3 @@
-#### Virtuals
-
-#### Get Single Product Reviews
-
-#### Remove All Reviews
-
 #### Aggregation Pipeline - Atlas and Code
 
 #### Order Schema

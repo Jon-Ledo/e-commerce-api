@@ -8,6 +8,8 @@ const {
   uploadImage,
 } = require('../controllers/productController')
 
+const { getSingleProductReviews } = require('../controllers/reviewController')
+
 const {
   authenticateUser,
   authorizePermissions,
@@ -35,5 +37,7 @@ router
     authorizePermissions('admin', 'owner'),
     deleteProduct
   )
+
+router.route('/:id/reviews').get(getSingleProductReviews)
 
 module.exports = router

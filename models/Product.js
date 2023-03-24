@@ -82,4 +82,10 @@ ProductSchema.virtual('reviews', {
   justOne: false,
 })
 
+// to remove all reviews associated with deleted product
+// this is why we used the remove() keyword in the delete routes, because it triggers this hook
+ProductSchema.pre('remove', async function (next) {
+  await this.model('Review').deleteMany({ product: this._id })
+})
+
 module.exports = mongoose.model('Product', ProductSchema)
