@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-const { StatusCodes } = require('http-status-codes')
-const CustomError = require('../errors')
 
 const ReviewSchema = new mongoose.Schema(
   {
