@@ -11,12 +11,11 @@ const {
   authorizePermissions,
 } = require('../middleware/authentication')
 
-router.route('/').get(getAllReviews)
+router.route('/').post(authenticateUser, createReview).get(getAllReviews)
 
 router
   .route('/:id')
   .get(getSingleReview)
-  .post(authenticateUser, createReview)
   .patch(authenticateUser, updateReview)
   .delete(authenticateUser, deleteReview)
 
