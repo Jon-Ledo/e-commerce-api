@@ -1,21 +1,3 @@
-#### Aggregation Pipeline - Atlas and Code
-
-#### Order Schema
-
-- [] create Order.js in models folder
-- [] create Schema
-- [] tax : {type:Number}
-- [] shippingFee: {type:Number}
-- [] subtotal: {type:Number}
-- [] total: {type:Number}
-- [] orderItems:[]
-- [] status:{type:String}
-- [] user
-- [] clientSecret:{type:String}
-- [] paymentId:{type:String}
-- [] set timestamps
-- [] export Order model
-
 #### Order Structure
 
 - [] add orderController file in controllers
