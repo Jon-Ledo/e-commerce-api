@@ -1,7 +1,3 @@
-#### Create Order
-
-- [] most complex
-
 #### Get All Orders and Get Single Order
 
 - [] getAllOrders - admin only
