@@ -1,29 +1,3 @@
-#### Get All Orders and Get Single Order
-
-- [] getAllOrders - admin only
-- [] getSingleOrder - chechPermissions
-
-#### Get Current User Orders
-
-- [] find orders where user is equal to req.user.userId
-
-#### Update Order
-
-- [] get order id
-- [] get paymentIntentId (req.body)
-- [] get order
-- [] if does not exist - 404
-- [] check permissions
-- [] set paymentIntentId and status as 'paid'
-- [] order.save()
-
-#### Create Docs
-
-- [] [Docgen Library] (https://github.com/thedevsaddam/docgen)
-- [] Export Postman Collection
-- [] docgen build -i fileName.json -o index.html
-- [] create index.html in public
-
 #### Security Packages
 
 - [] express-rate-limiter
