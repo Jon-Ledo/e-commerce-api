@@ -44,26 +44,25 @@ app.use(cors())
 app.use(xss())
 app.use(mongoSanitize())
 
-app.use(morgan('tiny'))
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('tiny'))
+}
 app.use(express.json())
 app.use(cookieParser(process.env.JWT_SECRET))
-app.use(express.static('./public'))
+// app.use(express.static('./public'))
+app.use(express.static('./docgen'))
 app.use(fileUpload())
 
-// route
+// API docs
 app.get('/', (req, res) => {
-  res.send('e-comerce api')
+  res.sendFile(path.join(__dirname, 'docgen/index.html'))
 })
 
+// route
 app.get('/api/v1', (req, res) => {
   // console.log(req.cookies)
   console.log(req.signedCookies)
   res.send('e-comerce api')
-})
-
-// API docs
-app.get('/api/v1/docs', (req, res) => {
-  res.sendFile(path.join(__dirname, './docgen/index.html'))
 })
 
 app.use('/api/v1/auth', authRouter)

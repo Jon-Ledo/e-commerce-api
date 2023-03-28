@@ -15,9 +15,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/auth/logout",
+							"raw": "https://e-commerce-api.herokuapp.com/auth/logout",
 							"host": [
-								"http://localhost:5000/auth"
+								"https://e-commerce-api.herokuapp.com/auth"
 							],
 							"path": [
 								"logout"
@@ -41,9 +41,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/auth/register",
+							"raw": "https://e-commerce-api.herokuapp.com/auth/register",
 							"host": [
-								"http://localhost:5000/auth"
+								"https://e-commerce-api.herokuapp.com/auth"
 							],
 							"path": [
 								"register"
@@ -67,9 +67,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/auth/login",
+							"raw": "https://e-commerce-api.herokuapp.com/auth/login",
 							"host": [
-								"http://localhost:5000/auth"
+								"https://e-commerce-api.herokuapp.com/auth"
 							],
 							"path": [
 								"login"
@@ -89,9 +89,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/users",
+							"raw": "https://e-commerce-api.herokuapp.com/users",
 							"host": [
-								"http://localhost:5000/users"
+								"https://e-commerce-api.herokuapp.com/users"
 							]
 						}
 					},
@@ -103,9 +103,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/users/6419e31f70f9a64c79a78912",
+							"raw": "https://e-commerce-api.herokuapp.com/users/6419e31f70f9a64c79a78912",
 							"host": [
-								"http://localhost:5000/users"
+								"https://e-commerce-api.herokuapp.com/users"
 							],
 							"path": [
 								"6419e31f70f9a64c79a78912"
@@ -120,9 +120,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/users/showMe",
+							"raw": "https://e-commerce-api.herokuapp.com/users/showMe",
 							"host": [
-								"http://localhost:5000/users"
+								"https://e-commerce-api.herokuapp.com/users"
 							],
 							"path": [
 								"showMe"
@@ -146,9 +146,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/users/updateUser",
+							"raw": "https://e-commerce-api.herokuapp.com/users/updateUser",
 							"host": [
-								"http://localhost:5000/users"
+								"https://e-commerce-api.herokuapp.com/users"
 							],
 							"path": [
 								"updateUser"
@@ -172,9 +172,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/users/updateUserPassword",
+							"raw": "https://e-commerce-api.herokuapp.com/users/updateUserPassword",
 							"host": [
-								"http://localhost:5000/users"
+								"https://e-commerce-api.herokuapp.com/users"
 							],
 							"path": [
 								"updateUserPassword"
@@ -194,9 +194,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/products",
+							"raw": "https://e-commerce-api.herokuapp.com/products",
 							"host": [
-								"http://localhost:5000/products"
+								"https://e-commerce-api.herokuapp.com/products"
 							]
 						}
 					},
@@ -217,9 +217,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/products",
+							"raw": "https://e-commerce-api.herokuapp.com/products",
 							"host": [
-								"http://localhost:5000/products"
+								"https://e-commerce-api.herokuapp.com/products"
 							]
 						}
 					},
@@ -231,9 +231,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/products/641cd54b8295aa420e700188",
+							"raw": "https://e-commerce-api.herokuapp.com/products/641cd54b8295aa420e700188",
 							"host": [
-								"http://localhost:5000/products"
+								"https://e-commerce-api.herokuapp.com/products"
 							],
 							"path": [
 								"641cd54b8295aa420e700188"
@@ -257,9 +257,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/products/641cd54b8295aa420e700188",
+							"raw": "https://e-commerce-api.herokuapp.com/products/641cd54b8295aa420e700188",
 							"host": [
-								"http://localhost:5000/products"
+								"https://e-commerce-api.herokuapp.com/products"
 							],
 							"path": [
 								"641cd54b8295aa420e700188"
@@ -274,9 +274,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/products/641cd54b8295aa420e700188",
+							"raw": "https://e-commerce-api.herokuapp.com/products/641cd54b8295aa420e700188",
 							"host": [
-								"http://localhost:5000/products"
+								"https://e-commerce-api.herokuapp.com/products"
 							],
 							"path": [
 								"641cd54b8295aa420e700188"
@@ -301,9 +301,9 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:5000/products/uploadImage",
+							"raw": "https://e-commerce-api.herokuapp.com/products/uploadImage",
 							"host": [
-								"http://localhost:5000/products"
+								"https://e-commerce-api.herokuapp.com/products"
 							],
 							"path": [
 								"uploadImage"
@@ -331,9 +331,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/reviews/",
+							"raw": "https://e-commerce-api.herokuapp.com/reviews/",
 							"host": [
-								"http://localhost:5000/reviews"
+								"https://e-commerce-api.herokuapp.com/reviews"
 							],
 							"path": [
 								""
@@ -348,9 +348,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/reviews/123",
+							"raw": "https://e-commerce-api.herokuapp.com/reviews/123",
 							"host": [
-								"http://localhost:5000/reviews"
+								"https://e-commerce-api.herokuapp.com/reviews"
 							],
 							"path": [
 								"123"
@@ -374,9 +374,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/reviews",
+							"raw": "https://e-commerce-api.herokuapp.com/reviews",
 							"host": [
-								"http://localhost:5000/reviews"
+								"https://e-commerce-api.herokuapp.com/reviews"
 							]
 						}
 					},
@@ -397,9 +397,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/reviews/641d4c15bb965d9554ad0952",
+							"raw": "https://e-commerce-api.herokuapp.com/reviews/641d4c15bb965d9554ad0952",
 							"host": [
-								"http://localhost:5000/reviews"
+								"https://e-commerce-api.herokuapp.com/reviews"
 							],
 							"path": [
 								"641d4c15bb965d9554ad0952"
@@ -414,9 +414,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/reviews/123",
+							"raw": "https://e-commerce-api.herokuapp.com/reviews/123",
 							"host": [
-								"http://localhost:5000/reviews"
+								"https://e-commerce-api.herokuapp.com/reviews"
 							],
 							"path": [
 								"123"
@@ -445,9 +445,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/orders",
+							"raw": "https://e-commerce-api.herokuapp.com/orders",
 							"host": [
-								"http://localhost:5000/orders"
+								"https://e-commerce-api.herokuapp.com/orders"
 							]
 						}
 					},
@@ -459,9 +459,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/orders",
+							"raw": "https://e-commerce-api.herokuapp.com/orders",
 							"host": [
-								"http://localhost:5000/orders"
+								"https://e-commerce-api.herokuapp.com/orders"
 							]
 						}
 					},
@@ -473,9 +473,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/orders/642305b1ddf28709f7bb2517",
+							"raw": "https://e-commerce-api.herokuapp.com/orders/642305b1ddf28709f7bb2517",
 							"host": [
-								"http://localhost:5000/orders"
+								"https://e-commerce-api.herokuapp.com/orders"
 							],
 							"path": [
 								"642305b1ddf28709f7bb2517"
@@ -499,9 +499,9 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/orders/642305b1ddf28709f7bb2517",
+							"raw": "https://e-commerce-api.herokuapp.com/orders/642305b1ddf28709f7bb2517",
 							"host": [
-								"http://localhost:5000/orders"
+								"https://e-commerce-api.herokuapp.com/orders"
 							],
 							"path": [
 								"642305b1ddf28709f7bb2517"
@@ -516,9 +516,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/orders/showAllMyOrders",
+							"raw": "https://e-commerce-api.herokuapp.com/orders/showAllMyOrders",
 							"host": [
-								"http://localhost:5000/orders"
+								"https://e-commerce-api.herokuapp.com/orders"
 							],
 							"path": [
 								"showAllMyOrders"
