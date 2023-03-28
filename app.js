@@ -4,6 +4,7 @@ require('express-async-errors')
 // express
 const express = require('express')
 const app = express()
+const path = require('path')
 
 // other packages
 const morgan = require('morgan')
@@ -39,6 +40,11 @@ app.get('/api/v1', (req, res) => {
   // console.log(req.cookies)
   console.log(req.signedCookies)
   res.send('e-comerce api')
+})
+
+// API docs
+app.get('/api/v1/docs', (req, res) => {
+  res.sendFile(path.join(__dirname, './docgen/index.html'))
 })
 
 app.use('/api/v1/auth', authRouter)
