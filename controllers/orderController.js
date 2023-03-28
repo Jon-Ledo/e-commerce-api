@@ -4,6 +4,12 @@ const { StatusCodes } = require('http-status-codes')
 const CustomError = require('../errors')
 const { checkPermissions } = require('../utils')
 
+// fake function
+const fakeStripeAPI = async ({ amount, curency }) => {
+  const clientSecret = 'someRandomValue'
+  return { clientSecret, amount }
+}
+
 const getAllOrders = async (req, res) => {
   res.send('getAllOrders')
 }
@@ -56,9 +62,31 @@ const createOrder = async (req, res) => {
     orderItems = [...orderItems, singleOrderItem]
     // calculate subtotal in each iteration
     subtotal += item.amount * price
-  }
+  } // end of loop
 
-  res.send('create order')
+  //calculate total
+  const total = tax + shippingFee + subtotal
+
+  // get client secret
+  // (using fake function,. not real Stripe library)
+  const paymentIntent = await fakeStripeAPI({
+    amount: total,
+    currency: 'usd',
+  })
+
+  const order = await Order.create({
+    orderItems,
+    total,
+    subTotal: subtotal,
+    tax,
+    shippingFee,
+    clientSecret: paymentIntent.clientSecret,
+    user: req.user.userId,
+  })
+
+  res
+    .status(StatusCodes.CREATED)
+    .json({ order, clientSecret: order.clientSecret })
 }
 
 const updateOrder = async (req, res) => {
