@@ -1,11 +1,3 @@
-#### Security Packages
-
-- [] express-rate-limiter
-- [] helmet
-- [] xss-clean
-- [] express-mongo-sanitize
-- [] cors (cookies!!!!)
-
 #### Deploy on Heroku
 
 - [] heroku account and heroku cli
